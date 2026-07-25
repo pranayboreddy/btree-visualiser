@@ -1,0 +1,165 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.panel {
+  position: relative;
+  width: min(460px, 100%);
+  background: var(--surface);
+  border-left: 1px solid var(--line);
+  box-shadow: -16px 0 48px var(--shadow);
+  overflow-y: auto;
+  animation: drawerIn 0.2s ease;
+}
+
+.head {
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.close {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line-2);
+  background: var(--surface);
+  color: var(--ink-2);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.close:hover {
+  background: var(--sunken);
+}
+
+.body {
+  padding: 18px;
+}
+
+.section {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 10px;
+}
+
+.rules {
+  margin: 0 0 22px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.rules li {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+.rules strong {
+  color: var(--ink);
+}
+
+.k {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+.table td {
+  font-size: 13px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-2);
+}
+.table td:last-child {
+  text-align: right;
+  font-family: var(--mono);
+  font-weight: 600;
+  color: var(--accent);
+}
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.fanout {
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+.fanout em {
+  color: var(--ink);
+  font-style: italic;
+}
+
+.legendList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.legendRow {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.legendRow span:last-child {
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+.swInternal,
+.swLeaf,
+.swActive,
+.swSource {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  flex: none;
+  margin-top: 2px;
+}
+.swInternal {
+  background: var(--node);
+  border: 1.5px solid var(--accent);
+}
+.swLeaf {
+  background: var(--leaf);
+  border: 1.5px solid var(--edge);
+}
+.swActive {
+  background: var(--amber);
+  opacity: 0.35;
+  border: 1.5px solid var(--amber);
+}
+.swSource {
+  border: 1.5px dashed var(--accent);
+}
