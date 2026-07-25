@@ -1,0 +1,121 @@
+.canvas {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.canvas:fullscreen {
+  background: var(--bg);
+}
+
+@media (max-width: 940px) {
+  .canvas {
+    flex: none;
+    height: min(58vh, 520px);
+  }
+}
+
+.wrap {
+  position: absolute;
+  inset: 0;
+  touch-action: none;
+}
+
+.token {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface);
+  border: 1px solid var(--line-2);
+  border-left-width: 3px;
+  border-radius: 9px;
+  padding: 7px 14px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px var(--shadow);
+  z-index: 20;
+  animation: chipIn 0.22s ease;
+}
+
+.zoomGroup {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line-2);
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+.zoomBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 32px;
+  border: none;
+  background: var(--surface);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+
+.zoomBtn:hover {
+  background: var(--sunken);
+  color: var(--ink);
+}
+
+.legend {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  font-size: 11px;
+  color: var(--ink-3);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 5px 10px;
+  pointer-events: none;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.swInternal,
+.swLeaf,
+.swChain {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex: none;
+}
+
+.swInternal {
+  background: var(--node);
+  border: 1.5px solid var(--accent);
+}
+
+.swLeaf {
+  background: var(--leaf);
+  border: 1.5px solid var(--edge);
+}
+
+.swChain {
+  width: 12px;
+  height: 0;
+  border-radius: 0;
+  border-top: 1.5px dashed var(--bplus);
+}
