@@ -1,0 +1,433 @@
+.rail {
+  min-width: 0;
+  background: var(--sunken);
+  border-left: 1px solid var(--line);
+  overflow-y: auto;
+  padding: 14px 14px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 15px 15px 16px;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 12px;
+}
+
+.rowLabel {
+  font-size: 12.5px;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+
+/* steppers */
+.stepper,
+.calcStepper {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--line-2);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface);
+}
+.calcStepper {
+  border-radius: 8px;
+}
+
+.stepBtn {
+  border: none;
+  border-right: 1px solid var(--line);
+  background: var(--sunken);
+  width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ink-2);
+}
+.stepBtnRight {
+  border-right: none;
+  border-left: 1px solid var(--line);
+}
+.stepBtn:hover {
+  background: var(--line);
+  color: var(--ink);
+}
+
+.stepVal {
+  flex: 1;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 600;
+  padding: 9px 0;
+  letter-spacing: -0.5px;
+}
+.calcMkVal {
+  flex: 1;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 0;
+}
+
+.tiles {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.tile {
+  flex: 1;
+  background: var(--sunken);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 9px;
+}
+
+.tileLabel {
+  font-size: 10.5px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 600;
+}
+
+.tileVal {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.note {
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--ink-3);
+  margin: 10px 0 0;
+}
+
+/* keys in tree */
+.bigRow {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+.bigNum {
+  font-family: var(--mono);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  line-height: 1;
+}
+.capOf {
+  font-size: 11.5px;
+  color: var(--ink-3);
+}
+.capTrack {
+  height: 4px;
+  border-radius: 4px;
+  background: var(--sunken);
+  overflow: hidden;
+  margin-top: 9px;
+}
+.capFill {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.segmented {
+  display: flex;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line-2);
+  border-radius: 9px;
+  overflow: hidden;
+}
+.segBtn {
+  flex: 1;
+  border: none;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 9px 0;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--mono);
+  cursor: pointer;
+}
+.segBtn:hover {
+  background: var(--sunken);
+}
+
+.exactRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+.exactLabel {
+  font-size: 11.5px;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.exactInput {
+  width: 72px;
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 6px 9px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--sunken);
+  outline: none;
+}
+.exactInput:focus {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+.addBtn {
+  flex: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-2);
+  border-radius: 7px;
+  padding: 6px 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+.addBtn:hover {
+  background: var(--sunken);
+  color: var(--ink);
+}
+.emptyBtn {
+  margin-left: auto;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background: transparent;
+  color: var(--ink-3);
+  padding: 6px 0;
+  font-size: 11.5px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+.emptyBtn:hover {
+  color: var(--rose);
+}
+.capHint {
+  font-size: 10.5px;
+  color: var(--ink-3);
+  margin-top: 9px;
+}
+
+/* read cost */
+.costTiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.costVal {
+  font-family: var(--mono);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  line-height: 1.1;
+}
+.accentVal {
+  color: var(--accent);
+}
+
+.bars {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.barTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 11.5px;
+  margin-bottom: 4px;
+}
+.barLabel {
+  color: var(--ink-2);
+}
+.barValGreen {
+  font-family: var(--mono);
+  font-weight: 600;
+  color: var(--green);
+}
+.barValRose {
+  font-family: var(--mono);
+  font-weight: 600;
+  color: var(--rose);
+}
+.barTrack {
+  height: 6px;
+  border-radius: 6px;
+  background: var(--sunken);
+  overflow: hidden;
+}
+.barGreen {
+  height: 100%;
+  border-radius: 6px;
+  background: var(--green);
+  transition: width 0.35s ease;
+}
+.barRose {
+  height: 100%;
+  border-radius: 6px;
+  background: var(--rose);
+}
+
+.lastSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 9px 11px;
+  border-radius: 9px;
+  background: transparent;
+  border: 1px solid var(--line);
+}
+.lastSearchOn {
+  background: var(--sunken);
+}
+.lastLabel {
+  font-size: 11.5px;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+.lastVal {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.boundWrap {
+  font-size: 11px;
+  color: var(--ink-3);
+  line-height: 1.6;
+  margin-top: 11px;
+}
+.boundFormula {
+  font-family: var(--mono);
+  color: var(--ink-2);
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* cost at scale */
+.calcToggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.calcToggle:hover {
+  color: var(--ink);
+}
+.calcCaret {
+  margin-left: auto;
+  display: flex;
+  transition: transform 0.15s ease;
+}
+.calcBody {
+  margin-top: 12px;
+}
+.calcLabel {
+  font-size: 11.5px;
+  color: var(--ink-2);
+  margin-bottom: 6px;
+}
+.calcInput {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--line-2);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--surface);
+  outline: none;
+}
+.calcInput:focus {
+  border-color: var(--accent);
+}
+.calcResult {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--sunken);
+}
+.calcRange {
+  font-family: var(--mono);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: var(--amber);
+  line-height: 1;
+}
+.calcNote {
+  font-size: 11.5px;
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin-top: 7px;
+}
+.calcNote b {
+  font-family: var(--mono);
+  color: var(--ink);
+}
+.calcFormula {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--ink-3);
+  margin-top: 8px;
+}
+
+@media (max-width: 940px) {
+  .rail {
+    border-left: none;
+    border-top: 1px solid var(--line);
+    overflow-y: visible;
+  }
+}
