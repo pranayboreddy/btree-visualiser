@@ -1,5 +1,9 @@
 # Tree Lab — B-tree & B+ tree Visualizer
 
+[![CI](https://github.com/pranayboreddy/btree-visualiser/actions/workflows/ci.yml/badge.svg)](https://github.com/pranayboreddy/btree-visualiser/actions/workflows/ci.yml)
+
+**[▶ Live demo](https://pranayboreddy.github.io/btree-visualiser/)**
+
 An interactive, animated visualizer for **B-trees** and **B+ trees**. Built to fill the gaps
 in existing tools: it supports **delete** and **update** (not just insert/search), switches
 between B-tree and B+ tree on the same key set, scales to hundreds of keys with a pan/zoom
