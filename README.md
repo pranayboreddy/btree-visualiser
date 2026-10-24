@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/pranayboreddy/btree-visualiser/actions/workflows/ci.yml/badge.svg)](https://github.com/pranayboreddy/btree-visualiser/actions/workflows/ci.yml)
 
-**[▶ Live demo](https://pranayboreddy.github.io/btree-visualiser/)**
+**[▶ Live demo](https://treelab.pranayboreddy.space/)**
 
 An interactive, animated visualizer for **B-trees** and **B+ trees**. Built to fill the gaps
 in existing tools: it supports **delete** and **update** (not just insert/search), switches
